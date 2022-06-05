@@ -25,15 +25,19 @@ fn main() {
 
 
     let mut some_string: String =  String::from("Hey Kenny~");
-    let some_str: &str = "COOL";
+    let some_str: &str = "COOL";  // Kenny@20220605 &str is a reference(指针) to a string
 
-    let some_string2 = some_proc(some_string,some_str);
+    let some_string2 = some_proc_b(some_string,some_str);
+    let mut some_string2 = "v2ex";
+    some_string2 = "dddn";
     println!("{} {}",some_string2,some_str);
-    
+    let a: u8 = 256;
+    println!("{}",a);
+
     // value_tour();
 }
 
-fn some_proc(mut param_a: String,param_b:&str) -> String{
+fn some_proc_b(mut param_a: String,param_b:&str) -> String{
     println!("{} {}",param_a,param_b);
     param_a = String::from("Hey Kenny~ NEW");
     return param_a;

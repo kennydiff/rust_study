@@ -1,20 +1,35 @@
 fn main() {
-    let s1 = String::from("hello world");
-    // let len = calculate_length(&mut s1);
-    // first_word(&s1);
-    println!("The first word of '{}' is '{}'.", s1, first_word(&s1));
+    let sb = String::from("hello world");
+    println!("The first word of '{}' is '{}'.", sb, first_word(&sb));
 }
 
+fn first_word(s: &String) -> &str {
+    let bytes = s.as_bytes();
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            return &s[0..i];
+        }
+    }    
+    // Kenny@20220610 SO COOL -- Github Copilot, SO COOL -- Rust
+    // Kenny@20220610 可以被理解为rust因为安全原因，要求所有所有分支可能都要覆盖返回值
+    &s[..] // Kenny@20220610 It can be understood that Rust requires all scopes to cover the return value for security reasons : return the whole string if no space is found.
+}
+
+// let len = calculate_length(&mut s1);
+// first_word(&s1);
+
+
+/*  // Kenny@20220610 
 fn first_word(s: &str) -> &str {
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
         if item == b' ' {
-            return &s[..i];
+            return &s[..i]    // Kenny@20220610 这里没有跳出函数吗？ 已经跳出了，何必最后还加那么一句废话。。。 fuck...
         }
     }    
-    &s[..]    // Kenny@20220610 这里会报错...类型不匹配，，如何返回？表达式？
-}
+    &s[..]    // Kenny@20220610 没有这句的话,这里会报错...类型不匹配，，如何返回？表达式？
+} */
 
 // fn calculate_length(s: &mut String) -> usize {
 //     s.push('!');

@@ -31,8 +31,14 @@ fn main() {
     let mut some_string2 = "v2ex";
     some_string2 = "dddn";
     println!("{} {}",some_string2,some_str);
-    let a: u8 = 256;
-    println!("{}",a);
+    let a: u8 = 255;
+    println!("{}",a);  // ken_220611 这里 需要将 擦水电费水电费开始的非
+
+    println!("{} 0x{:X}", 12, 12);  // KEN_23C31 这里 需要将 擦水电费水电费开始的非
+
+
+
+    println!("{}",11);  // ken_23c31 这里 需要将 擦水电费水电费开始的非
 
     // value_tour();
 }

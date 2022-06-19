@@ -12,7 +12,22 @@ fn main() {
     let y: Option<i8> = Some(5);  
 
     let sum = x + y.unwrap();
+    
+    let v = Some(3u8);
+    // match v {
+    //     Some(3) => println!("three"),
+    //     _ => println!("not three"),
+    // }
+
+    if let Some(2) = v {  // KEN_220618 - if let is a pattern match
+        println!("three");
+    } else {
+        println!("not three");
+    }
+    
+    // println!("{}",sum);
     //
+
     // #[derive(Debug)]
     // enum IpAddr {
     //     V4(u8, u8, u8, u8),

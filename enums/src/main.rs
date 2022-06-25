@@ -19,7 +19,7 @@ fn main() {
     //     _ => println!("not three"),
     // }
 
-    if let Some(2) = v {  // KEN_220618 - if let is a pattern match
+    if let Some(2) = v {  // K_22622 if let is a pattern match
         println!("three");
     } else {
         println!("not three");

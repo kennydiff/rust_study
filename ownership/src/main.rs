@@ -1,6 +1,16 @@
 fn main() {
-    let sb = String::from("hello world");
-    println!("The first word of '{}' is '{}'.", sb, first_word(&sb));
+    // let sb = String::from("hello world");
+    // println!("The first word of '{}' is '{}'.", sb, first_word(&sb));
+
+    // let s: &mut str = String::from("hello world").as_mut_str();
+    let ss = String::from("hello world");
+    let s0 = ss.as_str();
+    // ss = String::from("hello b");
+    let s1: &str = ss.as_str();
+    
+    // let s1 = String::from("hello world");
+    println!("{}", s0);
+    println!("{}", s1);
 }
 
 fn first_word(s: &String) -> &str {
